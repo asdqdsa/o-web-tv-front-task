@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Видеосервис</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/png" href="./assets/svg/logo.svg">
+  <script type="text/javascript" src="./assets/js/script.js" defer></script>
+</head>
+
+<body class="page" id="page">
+  <div class="modal content-block_disabled" id="modal">
+    <div class="modal__background" id="modalBackground"></div>
+    <div class="modal__wrapper">
+      <form class="modal__modalform">
+        <div class="modalform__innerwrapper">
+          <div class="modalform__inner-wrapper">
+            <p class="modalform__title">Вход</p>
+            <input class="modalform__field" id="login" type="text" value="" placeholder="Логин">
+            <input class="modalform__field" id="password" type="text" value="" placeholder="Пароль">
+            <label class="modalform__checkbox-title" id="checkMarkLabel">
+              <input class="modalform__form-checkbox modalform__checkbox_visibility" id="checkBox" type="checkbox">
+              <span class="modalform__rememberme">Запомнить</span>
+              <span class="modalform__checkbox"></span>
+              <img class="modalform__checkmark content-block_disabled" id="checkMark" src="./assets/svg/checkmark.svg"
+                alt="Галочка для чек-бокса формы регистрации">
+            </label>
+          </div>
+          <input class="modal__enterbutton" id="buttonEnterModal" type="submit" value="Войти">
+        </div>
+      </form>
+    </div>
+  </div>
+  <header class="container-wrapper">
+    <div class="header">
+      <div class="header__inner-wrapper">
+        <div class="logo">
+          <img src="./assets/svg/logo.svg"
+            alt="Логотип видеосервиса в виде красного круга с белым треугольником по центру">
+          <h1 class="logo_title">Видеосервис</h1>
+        </div>
+        <div class="search">
+          <input class="search__field" type="search" value="" placeholder="Поиск...">
+          <input class="button_type-search search__button_position" type="button" value="Найти">
+        </div>
+      </div>
+      <div class="header__account content-block_disabled" id="accountLogged">
+        <input class="header__logininput header__logininput_truncate" id="loginName" type="text" value="Константин К."
+          title="Константин К." readonly>
+        <button class="button_type-search header__quitbutton_position" id="headerQuitButton">Выйти</button>
+      </div>
+      <div class="header__account" id="accountLoggedOut">
+        <button class="button_type-enter header__quitbutton_position" id="headerEnterButton">Войти</button>
+      </div>
+    </div>
+  </header>
+  <main class="content-wrapper">
+    <div class="tabbs-wrapper">
+      <div class="tabbs">
+        <button class="tabbs__tabbcategory tabbs__tabbcategory_active" id="moviesTab" value="Фильмы">Фильмы</button>
+        <button class="tabbs__tabbcategory tabbs__tv" id="channelsTab" value="Телеканалы">Телеканалы</button>
+      </div>
+    </div>
+    <div id="movies">
+      <div class="shelf-wrapper">
+        <section class="cards-shelf">
+          <h2 class="cards-shelf__title"><img class="cards-shelf__title-icon" src="./assets/svg/newlogo.svg"
+              alt="Пламя костра">&nbsp;Новинки</h2>
+          <div class="cards-shelf__cards" id="movieShelf">
+            <div class="card-wrapper">
+              <div class="card" id="card#1">
+                <div class="card__img-container" id="cardImgContainer#1">
+                  <img class="card__img" id="cardImg#1" src="./assets/img/kittencover.png"
+                    alt="Серый котенок на зеленом фоне">
+                  <div class="card__imgover" id="cardImgover#1">
+                    <div class="card__layout" id="cardLayout#1">
+                      <div class="card__scroll" id="cardScroll#1">
+                        <div class="card__bar" id="cardBar#1">
+                          <div class="card__scroll-bar" id="cardScrollBar#1"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__innerwrapper" id="infoWrapper#1">
+                      <p class="card__info" id="cardInfo#1">Фильм повествует о...</p>
+                    </div>
+                  </div>
+                  <p class="card__title" id="cardTitle#1">Мульт в кино. Выпуск №103. Некогда грустить!</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-wrapper card-wrapper__second-card">
+              <div class="card" id="card#2">
+                <div class="card__img-container" id="cardImgContainer#2">
+                  <img class="card__img" id="cardImg#2" src="./assets/img/batmancover.png"
+                    alt="Супер-герой Бэтмена на фоне летучих мышей, чернобелый">
+                  <div class="card__imgover" id="cardImgover#2">
+                    <div class="card__layout" id="cardLayout#2">
+                      <div class="card__scroll" id="cardScroll#2">
+                        <div class="card__bar" id="cardBar#2">
+                          <div class="card__scroll-bar" id="cardScrollBar#2"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__innerwrapper" id="infoWrapper#2">
+                      <p class="card__info" id="cardInfo#2">Фильм повествует о...</p>
+                    </div>
+                  </div>
+                  <p class="card__title" id="cardTitle#2">Новый Бэтмен</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-wrapper card-wrapper__third-card">
+              <div class="card" id="card#3">
+                <div class="card__img-container" id="cardImgContainer#3">
+                  <img class="card__img" id="cardImg#3" src="./assets/img/hollywoodcover.png"
+                    alt="Лицо девушки с синими волосами в темных очках">
+                  <div class="card__imgover" id="cardImgover#3">
+                    <div class="card__layout" id="cardLayout#3">
+                      <div class="card__scroll" id="cardScroll#3">
+                        <div class="card__bar" id="cardBar#3">
+                          <div class="card__scroll-bar" id="cardScrollBar#3"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__innerwrapper" id="infoWrapper#3">
+                      <p class="card__info" id="cardInfo#3">Фильм повествует о череде событий, произошедших в Голливуде
+                        в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут
+                        пытаются найти свое место в стремительно меняющемся мире киноиндустрии. Lorem ipsum dolor sit
+                        amet, consectetur adipisicing elit. Est, at cupiditate molestiae aut omnis magnam debitis
+                        accusantium, repellat facere quod ad ratione fugiat. Voluptatem eum voluptatibus quaerat labore
+                        consequatur deleniti. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat quas
+                        autem pariatur, facilis optio sit earum labore accusamus nam officia itaque aperiam laboriosam,
+                        corrupti modi exercitationem debitis explicabo deleniti rem!</p>
+                    </div>
+                  </div>
+                  <p class="card__title" id="cardTitle#3">Однажды... в Голливуде</p>
+                </div>
+              </div>
+            </div>
+            <div class="card-wrapper card-wrapper__last-card">
+              <div class="card" id="card#4">
+                <div class="card__img-container" id="cardImgContainer#4">
+                  <img class="card__img" id="cardImg#4" src="./assets/img/hustlerscover.png"
+                    alt="Лицо девушки с синими волосами в темных очках">
+                  <div class="card__imgover" id="cardImgover#4">
+                    <div class="card__layout" id="cardLayout#4">
+                      <div class="card__scroll" id="cardScroll#4">
+                        <div class="card__bar" id="cardBar#4">
+                          <div class="card__scroll-bar" id="cardScrollBar#4"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card__innerwrapper" id="infoWrapper#4">
+                      <p class="card__info" id="cardInfo#4">Фильм повествует о...</p>
+                    </div>
+                  </div>
+                  <p class="card__title" id="cardTitle#4">Стриптизёрши</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="genre-wrapper">
+        <section class="cards-shelf genre-shelf-temp">
+          <h2 class="cards-shelf__title">Жанры</h2>
+          <div class="cards-shelf__cards">
+            <div class="card-wrapper">
+              <div class="genre-card genre-card_type_comedy">
+                <img class="genre-card__emoji" src="./assets/svg/comedy.svg" alt="Улыбающееся лицо">
+                <p class="genre-card_title">Комедии</p>
+              </div>
+            </div>
+            <div class="card-wrapper card-wrapper__second-card">
+              <div class="genre-card genre-card_type_drama">
+                <img class="genre-card__emoji" src="./assets/svg/drama.svg" alt="Плачущее лицо">
+                <p class="genre-card_title">Драмы</p>
+              </div>
+            </div>
+            <div class="card-wrapper card-wrapper__third-card">
+              <div class="genre-card genre-card_type_fiction">
+                <img class="genre-card__emoji" src="./assets/svg/fiction.svg" alt="Лицо инопланетянина">
+                <p class="genre-card_title">Фантастика</p>
+              </div>
+            </div>
+            <div class="card-wrapper card-wrapper__last-card">
+              <div class="genre-card genre-card_type_horror">
+                <img class="genre-card__emoji" src="./assets/svg/horror.svg" alt="Нарисованное привидение">
+                <p class="genre-card_title">Ужасы</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="channels-wrapper content-block_disabled" id="channels">
+      <section class="channels">
+        <div class="channels-innerwrapp" id="innerChannels">
+          <div class="channel-wrapper">
+            <div class="channel">
+              <div class="channel__logo">
+                <img class="channel__logo-img" src="./assets/svg/channel1.svg" alt="Цифра «1» синего цвета">
+              </div>
+              <ul class="channel__info">
+                <h2 class="channel__title">Первый канал</h2>
+                <li class="channel__show channel__show_active">
+                  <span class="channel__showtime">13:00</span>
+                  <span>Новости (с субтитрами)</span>
+                </li>
+                <li class="channel__show">
+                  <span class="channel__showtime">14:00</span>
+                  <span>Давай поженимся</span>
+                </li>
+                <li class="channel__show channel__showlast">
+                  <span class="channel__showtime">15:00</span>
+                  <span>Другие новости</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="channel-wrapper">
+            <div class="channel">
+              <div class="channel__logo">
+                <img class="channel__logo-img channel__logo-2x2" src="./assets/svg/channel2x2.svg"
+                  alt="Числа «2x2» белого цвета на черном фоне">
+              </div>
+              <ul class="channel__info">
+                <h2 class="channel__title">2x2</h2>
+                <li class="channel__show channel__show_active">
+                  <span class="channel__showtime">13:00</span>
+                  <span>МУЛЬТ ТВ. Сезон 4, 7 серия</span>
+                </li>
+                <li class="channel__show">
+                  <span class="channel__showtime">14:00</span>
+                  <span>ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</span>
+                </li>
+                <li class="channel__show channel__showlast">
+                  <span class="channel__showtime">15:00</span>
+                  <span>БУРДАШЕВ. Сезон 1, 20 серия</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="channel-wrapper">
+            <div class="channel">
+              <div class="channel__logo">
+                <img class="channel__logo-img channel__logo-rbk" src="./assets/svg/channelrbk.svg"
+                  alt="Квадрат разделенный на светлозелёный и темнозелёный треугольники">
+              </div>
+              <ul class="channel__info">
+                <h2 class="channel__title">РБК</h2>
+                <li class="channel__show channel__show_active channel_truncate">
+                  <span class="channel__showtime">13:00</span>
+                  <span>ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</span>
+                </li>
+                <li class="channel__show">
+                  <span class="channel__showtime">14:00</span>
+                  <span>ДЕНЬ. Главные темы</span>
+                </li>
+                <li class="channel__show">
+                  <span class="channel__showtime">15:00</span>
+                  <span>Главные новости</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="channel-wrapper">
+            <div class="channel channel__block_last">
+              <div class="channel__logo">
+                <img class="channel__logo-img channel__logo-amedia" src="./assets/svg/channelamedia.svg"
+                  alt="Буква «А» белого цвета на сером фоне">
+              </div>
+              <ul class="channel__info">
+                <h2 class="channel__title">AMEDIA PREMIUM</h2>
+                <li class="channel__show channel__show_active">
+                  <span class="channel__showtime">13:00</span>
+                  <span>Клиент всегда мёртв</span>
+                </li>
+                <li class="channel__show">
+                  <span class="channel__showtime">14:00</span>
+                  <span>Голодные игры: Сойка-пересмешница. Часть I</span>
+                </li>
+                <li class="channel__show channel__showlast">
+                  <span class="channel__showtime">15:00</span>
+                  <span>Секс в большом городе</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="channel-wrapper">
+            <div class="channel channel__block_last">
+              <div class="channel__logo">
+                <img class="channel__logo-img channel__logo-amedia" src="./assets/svg/channelamedia.svg"
+                  alt="Буква «А» белого цвета на сером фоне">
+              </div>
+              <ul class="channel__info">
+                <h2 class="channel__title">AMEDIA PREMIUM</h2>
+                <li class="channel__show channel__show_active">
+                  <span class="channel__showtime">13:00</span>
+                  <span>Клиент всегда мёртв</span>
+                </li>
+                <li class="channel__show">
+                  <span class="channel__showtime">14:00</span>
+                  <span>Голодные игры: Сойка-пересмешница. Часть I</span>
+                </li>
+                <li class="channel__show channel__showlast">
+                  <span class="channel__showtime">15:00</span>
+                  <span>Секс в большом городе</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="channels__scroll-wrapper" id="scrollWrapper">
+        <div class="channels__scroll-container" id="scrollInner">
+          <div class="channels__scroll-innerwrapper">
+            <div class="channels__scroll-bar" id="scrollBar">
+              <div class="channels__bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer-wrapper">
+    <div class="footer">
+      <img class="footer__logo" src="./assets/svg/letterboxlogo.svg" alt="Описание логотипа">
+      <address class="footer__info">
+        <p class="footer__address">420069, Россия, г. Москва, ул. Пушкина, д. Колотушкина</p>
+        <p class="footer__phone"><a title="Телефон">+1 (0002) 66-88-00, 11-44-77</a></p>
+        <p class="footer__link"><a class="footer__link_decoration" href="https://www.imdb.com/" target="_blank"
+            title="Ссылка на imdb.com">imdb.com</a></p>
+      </address>
+    </div>
+  </footer>
+</body>
+
+</html>

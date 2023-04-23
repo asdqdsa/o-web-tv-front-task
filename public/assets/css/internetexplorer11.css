@@ -1,0 +1,79 @@
+.genre-card_type_comedy {
+  background: linear-gradient(127.83deg, rgb(241, 199, 75) 8.44%, rgb(242, 155, 74) 91.36%);
+  opacity: 0.8;
+}
+
+.genre-card_type_comedy:hover {
+  background: linear-gradient(127.83deg, rgb(242, 201, 76) 8.44%, rgb(242, 154, 74) 91.36%);
+  opacity: 1;
+}
+
+.genre-card_type_drama {
+  background: linear-gradient(127.83deg, rgb(242, 152, 74) 8.44%, rgb(235, 86, 86) 91.36%);
+  opacity: 0.8;
+}
+
+.genre-card_type_drama:hover {
+  background: linear-gradient(127.83deg, rgb(242, 153, 74) 8.44%, rgb(235, 87, 87) 91.36%);
+  opacity: 1;
+}
+
+.genre-card_type_fiction {
+  background: linear-gradient(127.83deg, rgb(86, 204, 242) 8.44%, rgb(47, 128, 237) 91.36%);
+  opacity: 0.8;
+}
+
+.genre-card_type_fiction:hover {
+  background: linear-gradient(127.83deg, rgb(86, 204, 242) 8.44%, rgb(47, 128, 237) 91.36%);
+  opacity: 1;
+}
+
+.genre-card_type_horror {
+  background: linear-gradient(127.83deg, rgb(130, 130, 130) 8.44%, rgb(51, 51, 51) 91.36%);
+  opacity: 0.8;
+}
+
+.genre-card_type_horror:hover {
+  background: linear-gradient(127.83deg, rgb(130, 130, 130) 8.44%, rgb(51, 51, 51) 91.36%);
+  opacity: 1;
+}
+
+.card__imgover {
+  background: rgb(51, 51, 51);
+  opacity: 0;
+}
+
+.card__imgover:hover {
+  background: rgb(51, 51, 51);
+  opacity: 0.8;
+}
+
+.search__field {
+  border-bottom: 1px solid #333;
+}
+
+.search__field:-ms-input-placeholder {
+  color: #828282;
+  font-weight: 400;
+  font-family: Rubik;
+}
+
+.modalform__field:-ms-input-placeholder {
+  color: #828282;
+  font-weight: 400;
+  font-family: Rubik;
+}
+
+@media screen and (max-width: 979px) {
+  .button_type-search {
+    width: 100px;
+  }
+
+  .search__field {
+    width: 310px;
+  }
+
+  .search {
+    width: 310px;
+  }
+}
